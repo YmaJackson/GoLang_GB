@@ -32,6 +32,16 @@ func main() {
 	fmt.Printf("введите трехзначное число")
 	fmt.Scanln(&C)
 	hundreds = C / 100
+	fmt.Printf("введите трехзначное число")
+	fmt.Scanln(&C)
+	hundreds = C / 100
+	if C/100 == 0 {
+		fmt.Println("ERROR, u input not a three-digit num ")
+
+	} else if C/100 >= 10 {
+		fmt.Println("ERROR, u input not a three-digit num, please input correctly ")
+
+	}
 	units = C % 10
 	dozens = (C % 100) / 10
 	fmt.Println(hundreds, "- сотен", dozens, "- десятков", units, "- единиц")
